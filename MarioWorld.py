@@ -10,7 +10,7 @@ IMAGEM_CHAO = pygame.transform.scale2x(pygame.image.load(os.path.join('imgs', 'b
 IMAGEM_BACKGROUND = pygame.transform.scale2x(pygame.image.load(os.path.join('imgs', 'bg.png')))
 IMAGENS_PASSARO = [
     pygame.transform.scale2x(pygame.image.load(os.path.join('imgs', 'mario1.png'))),
-    pygame.transform.scale2x(pygame.image.load(os.path.join('imgs', 'mario3.png'))),
+    pygame.transform.scale2x(pygame.image.load(os.path.join('imgs', 'mario2.png'))),
     pygame.transform.scale2x(pygame.image.load(os.path.join('imgs', 'mario3.png'))),
 ]
 
@@ -94,7 +94,7 @@ class Passaro:
 
 
 class Cano:
-    DISTANCIA = 200
+    DISTANCIA = 250
     VELOCIDADE = 5
 
     def __init__(self, x):
