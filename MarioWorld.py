@@ -1,6 +1,10 @@
 import pygame
 import os
 import random
+import neat
+
+ai_jogando = True
+geracao = 0
 
 TELA_LARGURA = 500
 TELA_ALTURA = 800
@@ -168,12 +172,32 @@ def desenhar_tela(tela, passaros, canos, chao, pontos):
         cano.desenhar(tela)
 
     texto = FONTE_PONTOS.render(f"Pontuação: {pontos}", 1, (255, 255, 255))
-    tela.blit(texto, (TELA_LARGURA - 10 - texto.get_width(), 10))
+    tela.blit(texto, (10, 10))
+
+    if ai_jogando:
+        texto = FONTE_PONTOS.render(f"Geração: {geracao}", 1, (255, 255, 255))
+        tela.blit(texto, (TELA_LARGURA - 10 - texto.get_width(), 10))
+
     chao.desenhar(tela)
     pygame.display.update()
 
 
-def main():
+def main(genomas, config):
+    global geracao
+    geracao += 1
+
+    if ai_jogando:
+        redes = []
+        lista_genomas = []
+        passaros = []
+        for _, genoma in genomas:
+            rede = neat.nn.FeedForwardNetwork.create(genoma, config)
+            redes.append(rede)
+            genoma.fitness = 0
+            lista_genomas.append(genoma)
+            passaros.append(Passaro(230, 350))
+    else:
+        passaros = [Passaro(230, 350)]
     passaros = [Passaro(230, 350)]
     chao = Chao(730)
     canos = [Cano(700)]
@@ -191,10 +215,19 @@ def main():
                 rodando = False
                 pygame.quit()
                 quit()
-            if evento.type == pygame.KEYDOWN:
-                if evento.key == pygame.K_SPACE:
-                    for passaro in passaros:
-                        passaro.pular()
+            if not ai_jogando:
+                if evento.type == pygame.KEYDOWN:
+                    if evento.key == pygame.K_SPACE:
+                        for passaro in passaros:
+                            passaro.pular()
+
+        indice_cano = 0
+        if len(passaros) > 0:
+            if len(canos) > 1 and passaros[0].x > (canos[0]+ canos[0].CANO_TOPO.get_width()):
+                indice_cano = 1
+        else:
+            rodamd0 = False
+            break
 
         # mover as coisas
         for passaro in passaros:
@@ -225,6 +258,10 @@ def main():
                 passaros.pop(i)
 
         desenhar_tela(tela, passaros, canos, chao, pontos)
+
+
+def rodar():
+    pass
 
 
 if __name__ == '__main__':
