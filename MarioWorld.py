@@ -25,6 +25,7 @@ IMAGENS_PASSARO = [
 
 pygame.font.init()
 FONTE_PONTOS = pygame.font.SysFont('consolas', 35)
+pygame.display.set_caption("AI TRAINING")
 
 
 class Passaro:
@@ -102,7 +103,7 @@ class Passaro:
 
 
 class Cano:
-    DISTANCIA = 250
+    DISTANCIA = 190
     VELOCIDADE = 5
 
     def __init__(self, x):
