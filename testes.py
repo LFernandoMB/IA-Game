@@ -1,6 +1,57 @@
-# Installs
-# pip install pygame
-# pip install neat-python
+# import pygame
+
+# print(pygame.font.get_fonts())
+
+# [
+#     'arial', 'arialblack', 'bahnschrift', 'calibri', 'cambria', 'cambriamath', 'candara', 'comicsansms', 
+#     'consolas', 'constantia', 'corbel', 'couriernew', 'ebrima', 'franklingothicmedium', 'gabriola', 'gadugi', 
+#     'georgia', 'impact', 'inkfree', 'javanesetext', 'leelawadeeui', 'leelawadeeuisemilight', 'lucidaconsole', 
+#     'lucidasans', 'malgungothic', 'malgungothicsemilight', 'microsofthimalaya', 'microsoftjhenghei', 
+#     'microsoftjhengheiui', 'microsoftnewtailue', 'microsoftphagspa', 'microsoftsansserif', 'microsofttaile', 
+#     'microsoftyahei', 'microsoftyaheiui', 'microsoftyibaiti', 'mingliuextb', 'pmingliuextb', 'mingliuhkscsextb', 
+#     'mongolianbaiti', 'msgothic', 'msuigothic', 'mspgothic', 'mvboli', 'myanmartext', 'nirmalaui', 
+#     'nirmalauisemilight', 'palatinolinotype', 'segoemdl2assets', 'segoeprint', 'segoescript', 'segoeui', 
+#     'segoeuiblack', 'segoeuiemoji', 'segoeuihistoric', 'segoeuisemibold', 'segoeuisemilight', 'segoeuisymbol', 
+#     'simsun', 'nsimsun', 'simsunextb', 'sitkasmall', 'sitkatext', 'sitkasubheading', 'sitkaheading', 
+#     'sitkadisplay', 'sitkabanner', 'sylfaen', 'symbol', 'tahoma', 'timesnewroman', 'trebuchetms', 'verdana', 
+#     'webdings', 'wingdings', 'yugothic', 'yugothicuisemibold', 'yugothicui', 'yugothicmedium', 
+#     'yugothicuiregular', 'yugothicregular', 'yugothicuisemilight', 'holomdl2assets', 'agencyfbnegrito', 
+#     'agencyfb', 'algerian', 'bookantiquanegrito', 'bookantiquanegritoitálico', 'bookantiquaitálico', 
+#     'arialnegrito', 'arialnegritoitálico', 'arialitálico', 'arialrounded', 'baskervilleoldface', 'bauhaus93', 
+#     'bell', 'bellnegrito', 'bellitálico', 'bernardcondensed', 'bookantiqua', 'bodoninegrito', 
+#     'bodoninegritoitálico', 'bodoniblackitálico', 'bodoniblack', 'bodonicondensednegrito', 
+#     'bodonicondensednegritoitálico', 'bodonicondenseditálico', 'bodonicondensed', 'bodoniitálico', 
+#     'bodonipostercompressed', 'bodoni', 'bookmanoldstyle', 'bookmanoldstylenegrito', 
+#     'bookmanoldstylenegritoitálico', 'bookmanoldstyleitálico', 'bradleyhanditc', 'britannic', 
+#     'berlinsansfbnegrito', 'berlinsansfbdeminegrito', 'berlinsansfb', 'broadway', 'brushscriptitálico', 
+#     'bookshelfsymbol7', 'californianfbnegrito', 'californianfbitálico', 'californianfb', 'calisto', 
+#     'calistonegrito', 'calistonegritoitálico', 'calistoitálico', 'castellar', 'centuryschoolbook', 'centaur', 
+#     'century', 'chiller', 'colonna', 'cooperblack', 'copperplategothic', 'curlz', 'dubai', 'dubaimedium', 
+#     'dubairegular', 'elephant', 'elephantitálico', 'engravers', 'erasitc', 'erasdemiitc', 'erasmediumitc', 
+#     'felixtitling', 'forte', 'franklingothicbook', 'franklingothicbookitálico', 'franklingothicdemi', 
+#     'franklingothicdemicond', 'franklingothicdemiitálico', 'franklingothicheavy', 'franklingothicheavyitálico', 
+#     'franklingothicmediumcond', 'freestylescript', 'frenchscript', 'footlight', 'garamond', 'garamondnegrito', 
+#     'garamonditálico', 'gigi', 'gillsansnegritoitálico', 'gillsansnegrito', 'gillsanscondensed', 
+#     'gillsansitálico', 'gillsansultracondensed', 'gillsansultra', 'gillsans', 'gloucesterextracondensed', 
+#     'gillsansextcondensed', 'centurygothic', 'centurygothicnegrito', 'centurygothicnegritoitálico', 
+#     'centurygothicitálico', 'goudyoldstyle', 'goudyoldstylenegrito', 'goudyoldstyleitálico', 'goudystout', 
+#     'harlowsolid', 'harrington', 'haettenschweiler', 'hightowertext', 'hightowertextitálico', 'imprintshadow', 
+#     'informalroman', 'blackadderitc', 'edwardianscriptitc', 'kristenitc', 'jokerman', 'juiceitc', 
+#     'kunstlerscript', 'widelatin', 'lucidabright', 'lucidacalligraphy', 'leelawadee', 'leelawadeenegrito', 
+#     'lucidafaxregular', 'lucidafax', 'lucidahandwriting', 'lucidasansregular', 'lucidasansroman', 
+#     'lucidasanstypewriterregular', 'lucidasanstypewriter', 'lucidasanstypewriteroblique', 'magnetonegrito', 
+#     'maiandragd', 'maturascriptcapitals', 'mistral', 'modernno20', 'microsoftuighurnegrito', 'microsoftuighur', 
+#     'monotypecorsiva', 'extra', 'niagaraengraved', 'niagarasolid', 'ocraextended', 'oldenglishtext', 
+#     'onyx', 'msoutlook', 'palacescript', 'papyrus', 'parchment', 'perpetuanegritoitálico', 
+#     'perpetuanegrito', 'perpetuaitálico', 'perpetuatitlingnegrito', 'perpetuatitling', 'perpetua', 
+#     'playbill', 'poorrichard', 'pristina', 'rage', 'ravie', 'msreferencesansserif', 'msreferencespecialty', 
+#     'rockwellcondensednegrito', 'rockwellcondensed', 'rockwell', 'rockwellnegrito', 'rockwellnegritoitálico', 
+#     'rockwellextra', 'rockwellitálico', 'centuryschoolbooknegrito', 'centuryschoolbooknegritoitálico', 
+#     'centuryschoolbookitálico', 'script', 'showcardgothic', 'snapitc', 'stencil', 'twcennegritoitálico', 
+#     'twcennegrito', 'twcencondensednegrito', 'twcencondensedextra', 'twcencondensed', 'twcenitálico', 'twcen', 
+#     'tempussansitc', 'vinerhanditc', 'vivaldiitálico', 'vladimirscript', 'wingdings2', 'wingdings3', 'dbldwrsw'
+# ]
+
 
 import pygame
 import os
@@ -24,7 +75,7 @@ IMAGENS_PASSARO = [
 ]
 
 pygame.font.init()
-FONTE_PONTOS = pygame.font.SysFont('consolas', 35)
+FONTE_PONTOS = pygame.font.SysFont('calibri', 50)
 
 
 class Passaro:
@@ -102,7 +153,7 @@ class Passaro:
 
 
 class Cano:
-    DISTANCIA = 250
+    DISTANCIA = 200
     VELOCIDADE = 5
 
     def __init__(self, x):
@@ -175,18 +226,18 @@ def desenhar_tela(tela, passaros, canos, chao, pontos):
     for cano in canos:
         cano.desenhar(tela)
 
-    texto = FONTE_PONTOS.render(f"Score: {pontos}", 1, (255, 255, 0))
-    tela.blit(texto, (10, 20))
+    texto = FONTE_PONTOS.render(f"Pontuação: {pontos}", 1, (255, 255, 255))
+    tela.blit(texto, (TELA_LARGURA - 10 - texto.get_width(), 10))
 
     if ai_jogando:
-        texto = FONTE_PONTOS.render(f"Generation: {geracao}", 1, (255, 255, 0))
-        tela.blit(texto, (TELA_LARGURA - 10 - texto.get_width(), 20))
+        texto = FONTE_PONTOS.render(f"Geração: {geracao}", 1, (255, 255, 255))
+        tela.blit(texto, (10, 10))
 
     chao.desenhar(tela)
     pygame.display.update()
 
 
-def main(genomas, config): # Fitness Function
+def main(genomas, config): # fitness function
     global geracao
     geracao += 1
 
@@ -197,7 +248,7 @@ def main(genomas, config): # Fitness Function
         for _, genoma in genomas:
             rede = neat.nn.FeedForwardNetwork.create(genoma, config)
             redes.append(rede)
-            genoma.fitness = 0 # Pontuação de incentivo ou punição
+            genoma.fitness = 0
             lista_genomas.append(genoma)
             passaros.append(Passaro(230, 350))
     else:
@@ -237,8 +288,8 @@ def main(genomas, config): # Fitness Function
             passaro.mover()
             # aumentar um pouquinho a fitness do passaro
             lista_genomas[i].fitness += 0.1
-            output = redes[i].activate((passaro.y, 
-                                        abs(passaro.y - canos[indice_cano].altura), 
+            output = redes[i].activate((passaro.y,
+                                        abs(passaro.y - canos[indice_cano].altura),
                                         abs(passaro.y - canos[indice_cano].pos_base)))
             # -1 e 1 -> se o output for > 0.5 então o passaro pula
             if output[0] > 0.5:
@@ -281,12 +332,12 @@ def main(genomas, config): # Fitness Function
 
 
 def rodar(caminho_config):
-    config = neat.config.Config(neat.DefaultGenome, 
+    config = neat.config.Config(neat.DefaultGenome,
                                 neat.DefaultReproduction,
-                                neat.DefaultSpeciesSet, 
+                                neat.DefaultSpeciesSet,
                                 neat.DefaultStagnation,
                                 caminho_config)
-    
+
     populacao = neat.Population(config)
     populacao.add_reporter(neat.StdOutReporter(True))
     populacao.add_reporter(neat.StatisticsReporter())
@@ -299,5 +350,5 @@ def rodar(caminho_config):
 
 if __name__ == '__main__':
     caminho = os.path.dirname(__file__)
-    caminho_config = os.path.join(caminho, "config.txt")
+    caminho_config = os.path.join(caminho, 'config.txt')
     rodar(caminho_config)
